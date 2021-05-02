@@ -1,4 +1,4 @@
-import { Passenger } from 'models'
+import { Passenger, Luggage } from 'models'
 import { successResponse } from 'utils'
 
 export async function getAllPassengers(req, res, next) {
@@ -48,6 +48,9 @@ export async function destroyPassenger(req, res, next) {
   try {
     const destroyedPassenger = await Passenger.destroy({
       where: { id: passengerId },
+    })
+    const destroyedLuggage = await Luggage.destroy({
+      where: { passengerId },
     })
     return successResponse(res, destroyedPassenger)
   } catch (error) {
