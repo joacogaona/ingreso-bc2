@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
-
 import { Typography, Button } from 'antd'
 import API from '../config/api'
-const { Title, Text } = Typography
+const dictionary = { big: `Grande`, small: `Pequeño`, clothes: `Prenda` }
+const { Text } = Typography
 const getInitialState = () => ({
   passenger: null,
 })
@@ -23,7 +23,7 @@ function Passenger() {
 
   async function deletePassenger() {
     try {
-      const passenger = await API.destroyPassenger(passengerId)
+      await API.destroyPassenger(passengerId)
       setState({ passenger: null })
       history.push(`/`)
     } catch (e) {
@@ -36,7 +36,7 @@ function Passenger() {
   }, [])
 
   return (
-    <div>
+    <div style={{ marginLeft: `35%` }}>
       <div>
         <div style={{ marginBottom: `2%` }}>
           <Text>
@@ -57,7 +57,7 @@ function Passenger() {
           style={{
             display: `flex`,
             justifyContent: `space-between`,
-            width: `30%`,
+            width: `60%`,
             borderBottom: `1px dashed black`,
           }}
         >
@@ -73,12 +73,12 @@ function Passenger() {
                   style={{
                     display: `flex`,
                     justifyContent: `space-between`,
-                    width: `30%`,
+                    width: `60%`,
                   }}
                 >
                   <Text>{luggage.name}</Text>
                   <Text>{luggage.description}</Text>
-                  <Text>{luggage.luggageCategory.name}</Text>
+                  <Text>{dictionary[luggage.category.name]}</Text>
                 </div>
               )
             })

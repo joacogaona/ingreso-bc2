@@ -7,12 +7,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Luggage.belongsTo(models.Passenger, {
-        as: `passenger`,
-        foreignKey: `passengerId`,
-      })
       Luggage.belongsTo(models.LuggageCategory, {
-        as: `luggageCategory`,
+        as: `category`,
         foreignKey: `luggageCategoryId`,
       })
     }

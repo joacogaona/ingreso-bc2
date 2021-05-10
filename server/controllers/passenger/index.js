@@ -7,7 +7,6 @@ export async function getAllPassengers(req, res, next) {
       include: [
         {
           association: `luggage`,
-          include: [{ association: `luggageCategory` }],
         },
       ],
     })
@@ -24,7 +23,7 @@ export async function getPassenger(req, res, next) {
       include: [
         {
           association: `luggage`,
-          include: [{ association: `luggageCategory` }],
+          include: [{ association: `category` }],
         },
       ],
     })

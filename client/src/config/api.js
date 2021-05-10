@@ -36,4 +36,25 @@ API.destroyPassenger = async (passengerId) => {
     return Promise.reject(error)
   }
 }
+
+API.createPassenger = async (payload) => {
+  const {
+    data: { data, error, success },
+  } = await axios.post(`${API_BASE_URL}/passengers`, payload)
+  if (success) {
+    return data
+  } else {
+    return Promise.reject(error)
+  }
+}
+API.createLuggage = async (payload) => {
+  const {
+    data: { data, error, success },
+  } = await axios.post(`${API_BASE_URL}/luggage`, payload)
+  if (success) {
+    return data
+  } else {
+    return Promise.reject(error)
+  }
+}
 export default API

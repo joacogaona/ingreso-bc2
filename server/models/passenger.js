@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Passenger.hasMany(models.Luggage, {
         as: `luggage`,
-        foreignKey: `id`,
+        foreignKey: `passengerId`,
       })
     }
   }

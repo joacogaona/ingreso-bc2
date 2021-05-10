@@ -10,7 +10,6 @@
     "db:migrate": "node_modules/.bin/sequelize db:migrate",
     "db:migrate:undo": "node_modules/.bin/sequelize db:migrate:undo",
     "db:seed": "node_modules/.bin/sequelize db:seed:all"
-    
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -21,7 +20,7 @@
     "morgan": "~1.9.0",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.3.5",
+    "sequelize": "^6.6.2",
     "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
