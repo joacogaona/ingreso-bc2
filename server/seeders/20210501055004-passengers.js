@@ -2,7 +2,7 @@ module.exports = {
   up: queryInterface => {
     return queryInterface.bulkInsert(`Passengers`, [
       {
-        id: 1,
+        id: 10001,
         firstName: `Carlos`,
         lastName: `Calvo`,
         flightNumber: `A1234`,
@@ -10,7 +10,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: 2,
+        id: 10002,
         firstName: `Romina`,
         lastName: `Da`,
         flightNumber: `B1234`,
@@ -18,7 +18,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        id: 3,
+        id: 10003,
         firstName: `Agustina`,
         lastName: `Breo`,
         flightNumber: `C1234`,
