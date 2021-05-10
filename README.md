@@ -2,7 +2,7 @@
 Instrucciones para levantar el proyecto:
 
 1- Pararse en server e instalar dependencias
-2- En el .env del server escribir el usuario y contraseña que tenes para postgres. Y elegir el nombre que se le va a dar a la DB
+2- En el .env del server escribir el usuario y contraseña que tenes para postgres. Y elegir el nombre que se le va a dar a la DB. El puerto dejarlo en 4000.
 3- Tambien desde server correr el comando: npx sequelize db:create . La base de datos se deberia haber creado
 4- Correr migraciones con el comando : npx sequelize db:migrate
 5- Correr el seed con el comando: npx sequelize db:seed:all
